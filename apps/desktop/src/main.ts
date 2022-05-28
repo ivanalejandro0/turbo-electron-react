@@ -1,6 +1,11 @@
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
 
+// TODO: maybe better "production detection"
+const isProduction = process.env.NODE_ENV !== "dev";
+const UI_PATH = path.join(__dirname, "../ui/build/");
+const localServer = 'http://localhost:3000/';
+
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -11,8 +16,13 @@ function createWindow() {
     width: 800,
   });
 
-  // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, "../index.html"));
+  if (isProduction) {
+    // load bundled React app
+    mainWindow.loadFile(path.join(UI_PATH, "index.html"));
+  } else {
+    // load locally served React app in dev mode
+    mainWindow.loadURL(localServer);
+  }
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
