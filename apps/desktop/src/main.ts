@@ -22,7 +22,8 @@ async function createWindow() {
     // load bundled React app
     mainWindow.loadFile(path.join(UI_PATH, "index.html"));
   } else {
-    // TODO: low-prio, loadFile with spinner while local server is ready
+    // show loading spinner while local server is ready
+    mainWindow.loadFile(path.join(__dirname, "../loading.html"));
     await waitForServerUp(localServer)
     // load locally served React app in dev mode
     mainWindow.loadURL(localServer);
