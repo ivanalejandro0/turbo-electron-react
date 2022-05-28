@@ -4,6 +4,11 @@
   "main": "index.js",
   "author": "Ivan Alejandro <ivanalejandro0@gmail.com>",
   "license": "MIT",
+  "private": true,
+  "workspaces": [
+      "apps/*",
+      "packages/*"
+  ],
   "devDependencies": {
     "turbo": "^1.2.14"
   }
