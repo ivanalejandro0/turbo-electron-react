@@ -1,12 +1,14 @@
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
 
+import { waitForServerUp } from "wait-for-server-up";
+
 // TODO: maybe better "production detection"
 const isProduction = process.env.NODE_ENV !== "dev";
 const UI_PATH = path.join(__dirname, "../ui/build/");
 const localServer = 'http://localhost:3000/';
 
-function createWindow() {
+async function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     height: 600,
@@ -20,6 +22,8 @@ function createWindow() {
     // load bundled React app
     mainWindow.loadFile(path.join(UI_PATH, "index.html"));
   } else {
+    // TODO: low-prio, loadFile with spinner while local server is ready
+    await waitForServerUp(localServer)
     // load locally served React app in dev mode
     mainWindow.loadURL(localServer);
   }
