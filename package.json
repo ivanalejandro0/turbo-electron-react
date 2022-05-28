@@ -1,0 +1,10 @@
+{
+  "name": "turbo-electron-react",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Ivan Alejandro <ivanalejandro0@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^1.2.14"
+  }
+}
