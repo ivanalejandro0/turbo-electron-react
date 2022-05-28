@@ -9,6 +9,11 @@
       "apps/*",
       "packages/*"
   ],
+  "scripts": {
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint"
+  },
   "devDependencies": {
     "turbo": "^1.2.14"
   }
