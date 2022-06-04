@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-      "apps/*",
-      "packages/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -16,6 +16,6 @@
     "lint": "turbo run lint"
   },
   "devDependencies": {
-    "turbo": "^1.2.14"
+    "turbo": "^1.2.16"
   }
 }

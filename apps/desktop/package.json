@@ -9,11 +9,11 @@
     "start": "electron ./dist/main.js"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
-    "electron": "^19.0.1",
-    "eslint": "^8.16.0",
-    "typescript": "^4.7.2"
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "electron": "^19.0.3",
+    "eslint": "^8.17.0",
+    "typescript": "^4.7.3"
   },
   "dependencies": {
     "wait-for-server-up": "*"
