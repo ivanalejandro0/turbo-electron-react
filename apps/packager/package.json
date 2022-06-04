@@ -10,7 +10,7 @@
     "copy-electron": "rm -fr dist/; cp -R ../desktop/dist/ dist",
     "copy-ui": "rm -fr dist-ui/; cp -R ../ui/build/ dist-ui",
     "prepackage": "$npm_execpath run copy-electron && $npm_execpath run copy-ui",
-    "package": "electron-builder --config ./electron-builder-config.yaml --dir",
+    "package": "electron-builder --config ./electron-builder-config.yaml --dir --config.asar=false",
 
     "pkg-dir": "$npm_execpath run pkg-dir:mac && $npm_execpath run pkg-dir:linux",
     "pkg-dir:linux": "electron-builder --config ./electron-builder-config.yaml --dir --linux",
