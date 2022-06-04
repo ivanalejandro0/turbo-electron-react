@@ -5,7 +5,7 @@ import { waitForServerUp } from "wait-for-server-up";
 
 // TODO: maybe better "production detection"
 const isProduction = process.env.NODE_ENV !== "dev";
-const UI_PATH = path.join(__dirname, "../../ui/build/");
+const UI_PATH = path.join(__dirname, "../dist-ui/");
 const localServer = 'http://localhost:3000/';
 
 async function createWindow() {
