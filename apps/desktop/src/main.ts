@@ -27,10 +27,11 @@ async function createWindow() {
     await waitForServerUp(localServer)
     // load locally served React app in dev mode
     mainWindow.loadURL(localServer);
+
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
   }
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
