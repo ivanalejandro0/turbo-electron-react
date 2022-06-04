@@ -1,0 +1,13 @@
+directories:
+  output: ./pkg/
+appId: com.ivanalejandro0.turbo-electron-react
+extraMetadata:
+  name: turbo-electron-react
+files:
+  - filter:
+      - ./dist/**/*
+      - ./dist-ui/**/*
+includeSubNodeModules: true
+mac:
+  category: your.app.category.type
+electronVersion: 19.0.1
