@@ -12,8 +12,11 @@
       "dependsOn": ["desktop#build"],
       "cache": false
     },
+    "desktop#bundle": {
+      "dependsOn": ["desktop#build"]
+    },
     "packager#package": {
-      "dependsOn": ["ui#build", "desktop#build"],
+      "dependsOn": ["ui#build", "desktop#bundle"],
       "cache": false
     },
     "test": {

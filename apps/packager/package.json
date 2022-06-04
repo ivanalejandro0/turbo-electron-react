@@ -8,10 +8,8 @@
     "pkg:mac": "electron-builder --config ./electron-builder-config.yaml --mac --x64 --arm64",
 
     "copy-electron": "rm -fr dist/; cp -R ../desktop/dist/ dist",
-    "# copy-dep": "# manually copy dependency, so no bundler is needed on electron side",
-    "copy-dep": "mkdir -p ../desktop/dist/node_modules && cp -R ../../packages/wait-for-server-up/dist/ ../desktop/dist/node_modules/wait-for-server-up",
     "copy-ui": "rm -fr dist-ui/; cp -R ../ui/build/ dist-ui",
-    "prepackage": "$npm_execpath run copy-electron && $npm_execpath run copy-dep && $npm_execpath run copy-ui",
+    "prepackage": "$npm_execpath run copy-electron && $npm_execpath run copy-ui",
     "package": "electron-builder --config ./electron-builder-config.yaml --dir",
 
     "pkg-dir": "$npm_execpath run pkg-dir:mac && $npm_execpath run pkg-dir:linux",

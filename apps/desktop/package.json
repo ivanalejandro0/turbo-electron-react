@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "build": "tsc",
+    "# bundle": "# manually copy dependency, so no bundler is needed",
+    "bundle": "mkdir -p ./dist/node_modules && cp -R ../../packages/wait-for-server-up/dist/ ./dist/node_modules/wait-for-server-up",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "electron ./dist/main.js"
