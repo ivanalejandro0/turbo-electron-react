@@ -19,6 +19,10 @@
       "dependsOn": ["ui#build", "desktop#bundle"],
       "cache": false
     },
+    "packager#package-dir": {
+      "dependsOn": ["ui#build", "desktop#bundle"],
+      "cache": false
+    },
     "test": {
       "outputs": []
     },

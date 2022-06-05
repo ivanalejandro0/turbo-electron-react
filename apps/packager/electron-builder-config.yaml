@@ -10,4 +10,11 @@ files:
 includeSubNodeModules: true
 mac:
   category: your.app.category.type
-electronVersion: 19.0.1
+  target:
+    target: dmg
+    arch:
+      - x64
+      - arm64
+linux:
+  target: appimage
+electronVersion: 19.0.3

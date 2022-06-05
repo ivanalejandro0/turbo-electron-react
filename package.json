@@ -12,6 +12,7 @@
   "scripts": {
     "build": "turbo run build",
     "package": "turbo run package",
+    "package-dir": "turbo run package-dir",
     "start": "NODE_ENV=dev turbo run start",
     "lint": "turbo run lint"
   },

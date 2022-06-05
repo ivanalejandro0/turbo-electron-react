@@ -3,18 +3,16 @@
   "version": "0.0.0",
   "main": "./dist/main.js",
   "scripts": {
-    "pkg": "$npm_execpath run pkg:mac && $npm_execpath run pkg:linux",
-    "pkg:linux": "electron-builder --config ./electron-builder-config.yaml --linux tar.xz",
-    "pkg:mac": "electron-builder --config ./electron-builder-config.yaml --mac --x64 --arm64",
+    "pkg:linux": "electron-builder --config ./electron-builder-config.yaml --linux",
+    "pkg:mac": "electron-builder --config ./electron-builder-config.yaml --mac",
 
     "copy-electron": "rm -fr dist/; cp -R ../desktop/dist/ dist",
     "copy-ui": "rm -fr dist-ui/; cp -R ../ui/build/ dist-ui",
     "prepackage": "$npm_execpath run copy-electron && $npm_execpath run copy-ui",
-    "package": "electron-builder --config ./electron-builder-config.yaml --dir --config.asar=false",
+    "package": "electron-builder --config ./electron-builder-config.yaml",
 
-    "pkg-dir": "$npm_execpath run pkg-dir:mac && $npm_execpath run pkg-dir:linux",
-    "pkg-dir:linux": "electron-builder --config ./electron-builder-config.yaml --dir --linux",
-    "pkg-dir:mac": "electron-builder --config ./electron-builder-config.yaml --dir --mac"
+    "prepackage-dir": "$npm_execpath run prepackage",
+    "package-dir": "electron-builder --config ./electron-builder-config.yaml --dir --config.asar=false"
   },
   "devDependencies": {
     "electron-builder": "^23.0.3"
