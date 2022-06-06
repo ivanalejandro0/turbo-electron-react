@@ -7,7 +7,6 @@ files:
   - filter:
       - ./dist/**/*
       - ./dist-ui/**/*
-includeSubNodeModules: true
 mac:
   category: your.app.category.type
   target:

@@ -13,7 +13,7 @@
       "cache": false
     },
     "desktop#bundle": {
-      "dependsOn": ["desktop#build"]
+      "dependsOn": []
     },
     "packager#package": {
       "dependsOn": ["ui#build", "desktop#bundle"],
