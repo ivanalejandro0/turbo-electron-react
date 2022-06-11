@@ -37,10 +37,11 @@ yarn package
 
 * `apps/ui/` is pretty much the same as the default React app created
   by [create-react-app](https://create-react-app.dev/)
-* `apps/desktop/` is pretty much the same as what's found on the
-  [Electron quickstart
-  repo](https://github.com/electron/electron-quick-start-typescript.git)
-  (the TypeScript flavor).
+* `apps/desktop/` minimal Electron app, with support for TypeScript and
+  dependency bundling using [Webpack](https://webpack.js.org/). This app was
+  started from [Electron quickstart
+  repo](https://github.com/electron/electron-quick-start-typescript.git) (the
+  TypeScript flavor).
 * `apps/packager/` configurations and scripts to package the app using
   [Electron Builder](https://www.electron.build/)
 * `packages/wait-for-server-up/` is a small node package that could
