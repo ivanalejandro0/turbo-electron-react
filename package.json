@@ -14,7 +14,8 @@
     "package": "turbo run package",
     "package-dir": "turbo run package-dir",
     "start": "NODE_ENV=dev turbo run start",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "clean": "turbo run clean"
   },
   "devDependencies": {
     "turbo": "^1.2.16"

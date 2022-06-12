@@ -9,7 +9,9 @@
     "package": "electron-builder --config ./electron-builder-config.yaml",
 
     "prepackage-dir": "$npm_execpath run prepackage",
-    "package-dir": "electron-builder --config ./electron-builder-config.yaml --dir --config.asar=false"
+    "package-dir": "electron-builder --config ./electron-builder-config.yaml --dir --config.asar=false",
+
+    "clean": "rm -fr dist dist-ui pkg"
   },
   "devDependencies": {
     "electron-builder": "^23.0.3"

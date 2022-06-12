@@ -23,6 +23,10 @@
       "dependsOn": ["ui#build", "desktop#bundle"],
       "cache": false
     },
+    "clean": {
+      "dependsOn": ["^clean"],
+      "cache": false
+    },
     "test": {
       "outputs": []
     },
