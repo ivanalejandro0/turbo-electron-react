@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "main": "./dist/main.js",
   "scripts": {
-    "copy-electron": "rm -fr dist/; cp -R ../desktop/dist/ dist",
-    "copy-ui": "rm -fr dist-ui/; cp -R ../ui/build/ dist-ui",
+    "copy-electron": "rm -fr dist/ && cp -R ../desktop/dist/ dist",
+    "copy-ui": "rm -fr dist-ui/ && cp -R ../ui/build/ dist-ui",
     "prepackage": "$npm_execpath run copy-electron && $npm_execpath run copy-ui",
     "package": "electron-builder --config ./electron-builder-config.yaml",
 
