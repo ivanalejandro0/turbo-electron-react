@@ -5,10 +5,10 @@
   "scripts": {
     "copy-electron": "rm -fr dist/ && cp -R ../desktop/dist/ dist",
     "copy-ui": "rm -fr dist-ui/ && cp -R ../ui/build/ dist-ui",
-    "prepackage": "$npm_execpath run copy-electron && $npm_execpath run copy-ui",
+    "prepackage": "yarn run copy-electron && yarn run copy-ui",
     "package": "electron-builder --config ./electron-builder-config.yaml",
 
-    "prepackage-dir": "$npm_execpath run prepackage",
+    "prepackage-dir": "yarn run prepackage",
     "package-dir": "electron-builder --config ./electron-builder-config.yaml --dir --config.asar=false",
 
     "clean": "rm -fr dist dist-ui pkg"
